@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Contributions</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/contributions-style.css"/>
+</head>
+<body>
+  <a href="index.html" class="back-button">ফিরে যান</a>
+  <h2>সদস্যদের মাসিক অবদান</h2>
+
+  <table id="contributionTable"></table>
+
+  <!-- QR Popup -->
+  <!-- QR Payment Popup -->
+  <div id="qrPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background-color:rgba(0,0,0,0.7); align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:20px; border-radius:10px; text-align:center;">
+    <h3>Scan QR to Pay</h3>
+    <img id="qrCodeImage" src="path/to/qr-code.png" alt="QR Code" style="width:200px; height:200px;">
+    <br><br>
+    <input type="number" id="amountInput" placeholder="Enter Amount ₹" />
+    <br><br>
+    <button onclick="confirmPayment()">Confirm Payment</button>
+    <button onclick="document.getElementById('qrPopup').style.display='none'">Cancel</button>
+  </div>
+  <script src="js/contributions.js"></script>
+</body>
+</html>

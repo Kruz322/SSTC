@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Success</title>
+</head>
+<body>
+  <h2>Processing Payment...</h2>
+  <script>
+    async function getParams() {
+      const url = new URL(window.location.href);
+      return {
+        order_id: url.searchParams.get("order_id"),
+        amount: parseInt(url.searchParams.get("amount")),
+        member: parseInt(url.searchParams.get("member")),
+        months: parseInt(url.searchParams.get("months")),
+      };
+    }
+
+    async function verifyPayment(params) {
+      // Simulate verification: Replace with real fetch to Netlify function
+      const response = await fetch("/.netlify/functions/verify-payment", {
+        method: "POST",
+        body: JSON.stringify({
+          order_id: params.order_id,
+          payment_id: "dummy_payment_id",
+          signature: "dummy_signature"
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        localStorage.setItem(`paid_${params.member}`, params.months);
+        alert("Payment verified. Redirecting...");
+        window.location.href = "index.html";
+      } else {
+        alert("Payment verification failed.");
+        window.location.href = "index.html";
+      }
+    }
+
+    getParams().then(verifyPayment);
+  </script>
+</body>
+</html>

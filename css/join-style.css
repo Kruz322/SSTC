@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  padding: 20px;
+}
+
+/* Title */
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Form styling */
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh; /* leave room for Back button */
+  padding-top: 40px;
+}
+
+form#joinForm {  
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="tel"] {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="tel"]:focus {
+  border-color: #4e91fc;
+  outline: none;
+}
+
+/* Buttons */
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e91fc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #3a78d4;
+  transform: scale(1.02);
+}
+
+/* Responsive tweak */
+@media (max-width: 500px) {
+  form#joinForm {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

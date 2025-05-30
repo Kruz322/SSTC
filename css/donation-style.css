@@ -1,0 +1,51 @@
+/* styles.css */
+
+body {
+    background: #fff8f0; /* Soft cream */
+    font-family: 'Georgia', serif;
+    color: #5a3e1b; /* Warm brown */
+    padding: 40px 20px;
+    margin: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #6b4823;
+    text-shadow: 1px 1px 3px #e4cba1;
+  }
+
+  img {
+    display: block;
+    margin: 20px auto;
+    border: 8px solid #f3dfba; /* Light saffron border */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(161, 90, 42, 0.2);
+    max-width: 90vw;
+    height: auto;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #8a6b3f;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Optional subtle devotional decorative line */
+  body::before {
+    content: "ॐ";
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    color: #d2994b;
+    opacity: 0.15;
+    user-select: none;
+    pointer-events: none;
+  }
+  
